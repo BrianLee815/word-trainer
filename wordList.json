@@ -1,7 +1,24 @@
 [
-    { "word": "seoul", "meaning": "서울" },
-    { "word": "pusan", "meaning": "부산" },
-    { "word": "kimpo", "meaning": "김포" },
-    { "word": "tarzan", "meaning": "타잔"}
-  ]
+  { "word": "ability", "meaning": "능력" },
+  { "word": "behavior", "meaning": "행동, 태도" },
+  { "word": "challenge", "meaning": "도전" },
+  { "word": "decision", "meaning": "결정" },
+  { "word": "education", "meaning": "교육" },
+  { "word": "familiar", "meaning": "익숙한" },
+  { "word": "generous", "meaning": "관대한" },
+  { "word": "health", "meaning": "건강" },
+  { "word": "important", "meaning": "중요한" },
+  { "word": "journey", "meaning": "여정, 여행" },
+  { "word": "knowledge", "meaning": "지식" },
+  { "word": "language", "meaning": "언어" },
+  { "word": "mistake", "meaning": "실수" },
+  { "word": "nervous", "meaning": "긴장한" },
+  { "word": "opinion", "meaning": "의견" },
+  { "word": "practice", "meaning": "연습하다 / 연습" },
+  { "word": "quietly", "meaning": "조용히" },
+  { "word": "responsible", "meaning": "책임감 있는" },
+  { "word": "success", "meaning": "성공" },
+  { "word": "volunteer", "meaning": "자원봉사자 / 자원하다" }
+]
+
   
