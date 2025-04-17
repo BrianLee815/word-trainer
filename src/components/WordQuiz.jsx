@@ -6,7 +6,6 @@ function WordQuiz() {
   const [userAnswer, setUserAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);
 
-  // ✅ GitHub raw 링크로 JSON 불러오기
   const wordListUrl = 'https://raw.githubusercontent.com/BrianLee815/word-trainer/main/wordList.json';
 
   useEffect(() => {
@@ -37,39 +36,55 @@ function WordQuiz() {
   };
 
   return (
-    <div>
-      <h1>📝 단어 퀴즈</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-100 text-center">
+      <h1 className="text-3xl font-bold mb-8">📝 단어 퀴즈</h1>
       {wordList.length > 0 ? (
-        <div>
-          <p><strong>뜻:</strong> {wordList[currentIndex].meaning}</p>
-          <form onSubmit={handleSubmit}>
+        <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+          <p className="text-lg mb-6">
+            <strong>뜻:</strong> {wordList[currentIndex].meaning}
+          </p>
+          <form onSubmit={handleSubmit} className="mb-4">
             <input
               type="text"
               placeholder="영어 단어 입력"
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
+              className="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
-            <button type="submit">제출</button>
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition w-full"
+            >
+              제출
+            </button>
           </form>
 
-          {isCorrect === true && <p style={{ color: 'green' }}>정답입니다!</p>}
+          {isCorrect === true && (
+            <p className="text-green-600 font-semibold mb-4">정답입니다! 🎉</p>
+          )}
           {isCorrect === false && (
-            <p style={{ color: 'red' }}>
+            <p className="text-red-500 font-semibold mb-4">
               오답입니다. 정답: {wordList[currentIndex].word}
             </p>
           )}
 
           {isCorrect !== null && (
-            <button onClick={handleNext}>다음 문제</button>
+            <button
+              onClick={handleNext}
+              className="bg-gray-300 text-black px-6 py-2 rounded-md hover:bg-gray-400 transition w-full"
+            >
+              다음 문제
+            </button>
           )}
         </div>
       ) : (
-        <p>퀴즈 단어를 불러오는 중...</p>
+        <p className="text-gray-500 text-lg">퀴즈 단어를 불러오는 중...</p>
       )}
     </div>
   );
 }
 
 export default WordQuiz;
+
 
 
